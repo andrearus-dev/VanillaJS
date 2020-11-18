@@ -1,3 +1,13 @@
 const username = document.getElementById('username');
+const email = document.getElementById('email');
 
-console.log(username);
+
+const userInput = username.value;
+
+console.log(userInput);
+
+username.addEventListener('onload', e => {
+
+  e.preventDefault();
+  userInput;
+})
