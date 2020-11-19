@@ -17,6 +17,11 @@ funtion showSuccess(input) {
   formControl.className = 'form-control success';
 }
 
+function isValidEmail() {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
 
 
 form.addEventListener('submit', function(e) {
@@ -28,7 +33,7 @@ form.addEventListener('submit', function(e) {
       showSuccess(username);
     }
 
-    if(email.value === '') {
+    if(validateEmail(email.value) === '') {
       showError(email, 'Username is required'); }
       else {
         showSuccess(email);
