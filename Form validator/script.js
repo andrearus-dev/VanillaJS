@@ -12,6 +12,11 @@ function showError(input, message) {
   small.innerText = message;
 }
 
+funtion showSuccess(input) {
+  const formControl = input.parentElement;
+  formControl.className = 'forn-control success';
+}
+
 
 
 form.addEventListener('submit', function(e) {
@@ -20,7 +25,7 @@ form.addEventListener('submit', function(e) {
   const userInput = username.value;
 
   if(userInput === '') {
-    showError(username, 'Username must be 3 characters long'); }
+    showError(username, 'Username is required'); }
     else {
       hideError();
     }
