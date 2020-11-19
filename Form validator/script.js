@@ -14,7 +14,7 @@ function showError(input, message) {
 
 funtion showSuccess(input) {
   const formControl = input.parentElement;
-  formControl.className = 'forn-control success';
+  formControl.className = 'form-control success';
 }
 
 
@@ -22,13 +22,17 @@ funtion showSuccess(input) {
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 
-  const userInput = username.value;
-
-  if(userInput === '') {
+  if(username.value === '') {
     showError(username, 'Username is required'); }
     else {
-      hideError();
+      showSuccess(username);
     }
+
+    if(email.value === '') {
+      showError(email, 'Username is required'); }
+      else {
+        showSuccess(email);
+      }
 });
 
 
