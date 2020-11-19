@@ -33,20 +33,21 @@ form.addEventListener('submit', function(e) {
       showSuccess(username);
     }
 
-    if(validateEmail(email.value) === '') {
-      showError(email, 'Username is required'); }
-      else {
+    if(email.value === '') {
+      showError(email, 'Email is required'); }
+      else if(!isValidEmail(email.value))
+      showError(email, 'Email is not valid');{
         showSuccess(email);
       }
 
       if(password.value === '') {
-        showError(password, 'Username is required'); }
+        showError(password, 'Password is required'); }
         else {
           showSuccess(password);
         }
 
       if(password2.value === '') {
-        showError(password2, 'Username is required'); }
+        showError(password2, 'Password 2 is required'); }
         else {
           showSuccess(password2);
         }
