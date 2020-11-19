@@ -33,6 +33,19 @@ form.addEventListener('submit', function(e) {
       else {
         showSuccess(email);
       }
+
+      if(password.value === '') {
+        showError(password, 'Username is required'); }
+        else {
+          showSuccess(password);
+        }
+
+      if(password2.value === '') {
+        showError(password2, 'Username is required'); }
+        else {
+          showSuccess(password2);
+        }
+        
 });
 
 
