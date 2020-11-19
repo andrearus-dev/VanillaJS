@@ -6,7 +6,11 @@ const password2 = document.getElementById('password2');
 
 function showError(input, message) {
 
+  const formControl = input.parentElement;
   
+
+
+
 }
 
 
@@ -17,8 +21,10 @@ form.addEventListener('submit', function(e) {
   const userInput = username.value;
 
   if(userInput === '') {
-    html += this.innerHTML
-    console.log()
+    showError(input, 'Username must be 3 characters long');
+    else {
+      hideError();
+    }
   }
 });
 
