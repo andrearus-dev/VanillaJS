@@ -25,10 +25,9 @@ function isValidEmail() {
 function checkRequired(inputArr) {
 
   inputArr.forEach(function(input) { 
-    console.log(input);
-  })
+    console.log(input.value);
+  });
 }
-
 
 
 form.addEventListener('submit', function(e) {
