@@ -12,7 +12,7 @@ function showError(input, message) {
   small.innerText = message;
 }
 
-funtion showSuccess(input) {
+function showSuccess(input) {
   const formControl = input.parentElement;
   formControl.className = 'form-control success';
 }
@@ -29,6 +29,10 @@ function checkRequired(inputArr) {
       showError(input, `${getFieldName(input)} is required`)
     }
   });
+}
+
+function getFieldName(input) {
+  return input.id.charAt(0).toUpperCase + input.id.slice(1);
 }
 
 
